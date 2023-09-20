@@ -13,6 +13,7 @@
 		AC68F5EC2ABB08CC00661926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC68F5EB2ABB08CC00661926 /* Preview Assets.xcassets */; };
 		AC68F5EE2ABB08CC00661926 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5ED2ABB08CC00661926 /* Persistence.swift */; };
 		AC68F5F12ABB08CC00661926 /* SampleNotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5EF2ABB08CC00661926 /* SampleNotesApp.xcdatamodeld */; };
+		AC68F5F92ABB099D00661926 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5F82ABB099D00661926 /* FolderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		AC68F5EB2ABB08CC00661926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC68F5ED2ABB08CC00661926 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AC68F5F02ABB08CC00661926 /* SampleNotesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleNotesApp.xcdatamodel; sourceTree = "<group>"; };
+		AC68F5F82ABB099D00661926 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		AC68F5E32ABB08CB00661926 /* SampleNotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC68F5F72ABB098A00661926 /* ViewModel */,
 				AC68F5E42ABB08CB00661926 /* SampleNotesAppApp.swift */,
 				AC68F5E62ABB08CB00661926 /* ContentView.swift */,
 				AC68F5E82ABB08CC00661926 /* Assets.xcassets */,
@@ -71,6 +74,14 @@
 				AC68F5EB2ABB08CC00661926 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC68F5F72ABB098A00661926 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC68F5F82ABB099D00661926 /* FolderViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC68F5EE2ABB08CC00661926 /* Persistence.swift in Sources */,
+				AC68F5F92ABB099D00661926 /* FolderViewModel.swift in Sources */,
 				AC68F5E72ABB08CB00661926 /* ContentView.swift in Sources */,
 				AC68F5E52ABB08CB00661926 /* SampleNotesAppApp.swift in Sources */,
 				AC68F5F12ABB08CC00661926 /* SampleNotesApp.xcdatamodeld in Sources */,
