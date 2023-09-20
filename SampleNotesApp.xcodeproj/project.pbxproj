@@ -15,6 +15,11 @@
 		AC68F5F12ABB08CC00661926 /* SampleNotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5EF2ABB08CC00661926 /* SampleNotesApp.xcdatamodeld */; };
 		AC68F5F92ABB099D00661926 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5F82ABB099D00661926 /* FolderViewModel.swift */; };
 		AC68F5FB2ABB0AC000661926 /* AddFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5FA2ABB0AC000661926 /* AddFolderView.swift */; };
+		AC68F5FD2ABB134400661926 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5FC2ABB134400661926 /* NotesViewModel.swift */; };
+		AC68F6022ABB156B00661926 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5FE2ABB156B00661926 /* Folder+CoreDataClass.swift */; };
+		AC68F6032ABB156B00661926 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5FF2ABB156B00661926 /* Folder+CoreDataProperties.swift */; };
+		AC68F6042ABB156B00661926 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F6002ABB156B00661926 /* Notes+CoreDataClass.swift */; };
+		AC68F6052ABB156B00661926 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F6012ABB156B00661926 /* Notes+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		AC68F5F02ABB08CC00661926 /* SampleNotesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleNotesApp.xcdatamodel; sourceTree = "<group>"; };
 		AC68F5F82ABB099D00661926 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		AC68F5FA2ABB0AC000661926 /* AddFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFolderView.swift; sourceTree = "<group>"; };
+		AC68F5FC2ABB134400661926 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		AC68F5FE2ABB156B00661926 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC68F5FF2ABB156B00661926 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC68F6002ABB156B00661926 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC68F6012ABB156B00661926 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,10 @@
 		AC68F5D82ABB08CB00661926 = {
 			isa = PBXGroup;
 			children = (
+				AC68F5FE2ABB156B00661926 /* Folder+CoreDataClass.swift */,
+				AC68F5FF2ABB156B00661926 /* Folder+CoreDataProperties.swift */,
+				AC68F6002ABB156B00661926 /* Notes+CoreDataClass.swift */,
+				AC68F6012ABB156B00661926 /* Notes+CoreDataProperties.swift */,
 				AC68F5E32ABB08CB00661926 /* SampleNotesApp */,
 				AC68F5E22ABB08CB00661926 /* Products */,
 			);
@@ -83,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				AC68F5F82ABB099D00661926 /* FolderViewModel.swift */,
+				AC68F5FC2ABB134400661926 /* NotesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -158,9 +173,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC68F5EE2ABB08CC00661926 /* Persistence.swift in Sources */,
+				AC68F5FD2ABB134400661926 /* NotesViewModel.swift in Sources */,
 				AC68F5F92ABB099D00661926 /* FolderViewModel.swift in Sources */,
+				AC68F6042ABB156B00661926 /* Notes+CoreDataClass.swift in Sources */,
 				AC68F5FB2ABB0AC000661926 /* AddFolderView.swift in Sources */,
+				AC68F6032ABB156B00661926 /* Folder+CoreDataProperties.swift in Sources */,
 				AC68F5E72ABB08CB00661926 /* ContentView.swift in Sources */,
+				AC68F6052ABB156B00661926 /* Notes+CoreDataProperties.swift in Sources */,
+				AC68F6022ABB156B00661926 /* Folder+CoreDataClass.swift in Sources */,
 				AC68F5E52ABB08CB00661926 /* SampleNotesAppApp.swift in Sources */,
 				AC68F5F12ABB08CC00661926 /* SampleNotesApp.xcdatamodeld in Sources */,
 			);
