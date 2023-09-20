@@ -74,14 +74,16 @@ struct ContentView: View {
                     Label{
                         
                     }icon: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.app.fill")
+                      //  Image(systemName: "plus")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 50, height: 50)
                             .padding()
                         
                         
                     }
                 }
+                .offset(x:150)
                 .sheet(isPresented: $showAddBottomSheet){
                     if #available(iOS 16.0, *) {
                         AddFolderView(viewModel: viewModel, folderName: folderName, showAddBottomSheet: $showAddBottomSheet)
