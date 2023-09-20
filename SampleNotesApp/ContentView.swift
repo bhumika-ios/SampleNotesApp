@@ -26,17 +26,16 @@ struct ContentView: View {
                             NavigationLink {
                                 // EmployeesView(company: item)
                             } label: {
-                                VStack(alignment: .leading) {
+                                VStack {
                                     Image(systemName: "folder.fill")
                                         .resizable()
                                         .frame(width: 130, height: 100)
                                     Text(item.title ?? "")
                                         .fontWeight(.semibold)
                                         .font(.headline)
-                                    // Text(item.owner ?? "")
-                                    // .font(.subheadline)
+                                        .multilineTextAlignment(.center) // Center-align the title
                                 }
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(maxWidth: .infinity)
                                 .padding(.horizontal)
                                 .padding(.bottom)
                             }
