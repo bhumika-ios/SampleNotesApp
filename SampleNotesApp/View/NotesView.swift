@@ -34,8 +34,8 @@ struct NotesView: View {
                                         Text(item.unwrappedName)
                                             .fontWeight(.semibold)
                                             .font(.headline)
-                                        Text(item.folder?.title ?? "")
-                                            .font(.subheadline)
+//                                        Text(item.folder?.title ?? "")
+//                                            .font(.subheadline)
                                     }
                                     .padding()
                                 )
@@ -69,6 +69,7 @@ struct NotesView: View {
                 }
                
             }
+            .navigationBarTitle(Text(viewModel.folder.title!), displayMode: .inline)
             .padding()
            
         }
