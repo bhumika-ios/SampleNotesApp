@@ -20,6 +20,9 @@
 		AC68F6032ABB156B00661926 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F5FF2ABB156B00661926 /* Folder+CoreDataProperties.swift */; };
 		AC68F6042ABB156B00661926 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F6002ABB156B00661926 /* Notes+CoreDataClass.swift */; };
 		AC68F6052ABB156B00661926 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F6012ABB156B00661926 /* Notes+CoreDataProperties.swift */; };
+		AC68F6092ABB178E00661926 /* AddNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68F6082ABB178E00661926 /* AddNotesView.swift */; };
+		ACDAEEA52ABC21B00027549E /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAEEA42ABC21B00027549E /* NotesView.swift */; };
+		ACEFB38B2ABC4BA300653739 /* MasonryStack in Frameworks */ = {isa = PBXBuildFile; productRef = ACEFB38A2ABC4BA300653739 /* MasonryStack */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,8 @@
 		AC68F5FF2ABB156B00661926 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC68F6002ABB156B00661926 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AC68F6012ABB156B00661926 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC68F6082ABB178E00661926 /* AddNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesView.swift; sourceTree = "<group>"; };
+		ACDAEEA42ABC21B00027549E /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEFB38B2ABC4BA300653739 /* MasonryStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,10 +59,6 @@
 		AC68F5D82ABB08CB00661926 = {
 			isa = PBXGroup;
 			children = (
-				AC68F5FE2ABB156B00661926 /* Folder+CoreDataClass.swift */,
-				AC68F5FF2ABB156B00661926 /* Folder+CoreDataProperties.swift */,
-				AC68F6002ABB156B00661926 /* Notes+CoreDataClass.swift */,
-				AC68F6012ABB156B00661926 /* Notes+CoreDataProperties.swift */,
 				AC68F5E32ABB08CB00661926 /* SampleNotesApp */,
 				AC68F5E22ABB08CB00661926 /* Products */,
 			);
@@ -73,14 +75,14 @@
 		AC68F5E32ABB08CB00661926 /* SampleNotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC68F6072ABB177400661926 /* View */,
+				AC68F6062ABB175F00661926 /* Model */,
 				AC68F5F72ABB098A00661926 /* ViewModel */,
 				AC68F5E42ABB08CB00661926 /* SampleNotesAppApp.swift */,
-				AC68F5E62ABB08CB00661926 /* ContentView.swift */,
 				AC68F5E82ABB08CC00661926 /* Assets.xcassets */,
 				AC68F5ED2ABB08CC00661926 /* Persistence.swift */,
 				AC68F5EF2ABB08CC00661926 /* SampleNotesApp.xcdatamodeld */,
 				AC68F5EA2ABB08CC00661926 /* Preview Content */,
-				AC68F5FA2ABB0AC000661926 /* AddFolderView.swift */,
 			);
 			path = SampleNotesApp;
 			sourceTree = "<group>";
@@ -102,6 +104,28 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AC68F6062ABB175F00661926 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC68F5FE2ABB156B00661926 /* Folder+CoreDataClass.swift */,
+				AC68F5FF2ABB156B00661926 /* Folder+CoreDataProperties.swift */,
+				AC68F6002ABB156B00661926 /* Notes+CoreDataClass.swift */,
+				AC68F6012ABB156B00661926 /* Notes+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC68F6072ABB177400661926 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC68F5FA2ABB0AC000661926 /* AddFolderView.swift */,
+				AC68F5E62ABB08CB00661926 /* ContentView.swift */,
+				AC68F6082ABB178E00661926 /* AddNotesView.swift */,
+				ACDAEEA42ABC21B00027549E /* NotesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +142,9 @@
 			dependencies = (
 			);
 			name = SampleNotesApp;
+			packageProductDependencies = (
+				ACEFB38A2ABC4BA300653739 /* MasonryStack */,
+			);
 			productName = SampleNotesApp;
 			productReference = AC68F5E12ABB08CB00661926 /* SampleNotesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +173,9 @@
 				Base,
 			);
 			mainGroup = AC68F5D82ABB08CB00661926;
+			packageReferences = (
+				ACEFB3892ABC4BA300653739 /* XCRemoteSwiftPackageReference "MasonryStack" */,
+			);
 			productRefGroup = AC68F5E22ABB08CB00661926 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,7 +211,9 @@
 				AC68F5E72ABB08CB00661926 /* ContentView.swift in Sources */,
 				AC68F6052ABB156B00661926 /* Notes+CoreDataProperties.swift in Sources */,
 				AC68F6022ABB156B00661926 /* Folder+CoreDataClass.swift in Sources */,
+				ACDAEEA52ABC21B00027549E /* NotesView.swift in Sources */,
 				AC68F5E52ABB08CB00661926 /* SampleNotesAppApp.swift in Sources */,
+				AC68F6092ABB178E00661926 /* AddNotesView.swift in Sources */,
 				AC68F5F12ABB08CC00661926 /* SampleNotesApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +415,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACEFB3892ABC4BA300653739 /* XCRemoteSwiftPackageReference "MasonryStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukepistrol/MasonryStack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACEFB38A2ABC4BA300653739 /* MasonryStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACEFB3892ABC4BA300653739 /* XCRemoteSwiftPackageReference "MasonryStack" */;
+			productName = MasonryStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AC68F5EF2ABB08CC00661926 /* SampleNotesApp.xcdatamodeld */ = {
