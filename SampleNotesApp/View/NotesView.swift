@@ -18,7 +18,7 @@ struct NotesView: View {
     }
 
     var body: some View {
-        NavigationView {
+        ZStack {
             VStack {
                 ScrollView(showsIndicators: false) {
                     MasonryVStack(spacing: 6) {
@@ -47,30 +47,31 @@ struct NotesView: View {
 
                   //  .padding()
                 }
-
-                Button {
-                    showAddFullSheet.toggle()
-                } label: {
-                    Image(systemName: "plus.app.fill")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                }
-                .offset(x: 150)
-                .fullScreenCover(isPresented: $showAddFullSheet) {
-                    if #available(iOS 16.0, *) {
-                        AddNotesView(viewModel: viewModel, showAddFullSheet: $showAddFullSheet)
-                    } else {
-                        // Fallback on earlier versions
-                    }
-                }
+               
+               
                
             }
-            .navigationBarTitle(Text(viewModel.folder.title!), displayMode: .inline)
             .padding()
+            Button {
+                showAddFullSheet.toggle()
+            } label: {
+                Image(systemName: "plus.app.fill")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.white)
+                  
+            }
+            .offset(x: 150, y:300)
+            .fullScreenCover(isPresented: $showAddFullSheet) {
+                if #available(iOS 16.0, *) {
+                    AddNotesView(viewModel: viewModel, showAddFullSheet: $showAddFullSheet)
+                } else {
+                    // Fallback on earlier versions
+                }
+            }
+            .navigationBarTitle(Text(viewModel.folder.title!), displayMode: .inline)
+            
+           
            
         }
     }
