@@ -24,7 +24,7 @@ struct ContentView: View {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(viewModel.folderArray, id: \.id) { item in
                             NavigationLink {
-                                // EmployeesView(company: item)
+                                 NotesView(folder: item)
                             } label: {
                                 VStack {
                                     Image(systemName: "folder.fill")
