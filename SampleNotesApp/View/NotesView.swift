@@ -19,6 +19,8 @@ struct NotesView: View {
 
     var body: some View {
         ZStack {
+            Color("BGColor")
+                .ignoresSafeArea(.all)
             VStack {
                 ScrollView(showsIndicators: false) {
                     MasonryVStack(spacing: 6) {
@@ -26,7 +28,7 @@ struct NotesView: View {
                             let item = viewModel.notesArray[index]
                             let height = calculateHeight(index: index)
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.blue)
+                                .fill(Color.white)
                                 .frame(width: 165, height: height)
                                // .padding()
                                 .overlay(
@@ -58,7 +60,7 @@ struct NotesView: View {
                 Image(systemName: "plus.app.fill")
                     .resizable()
                     .frame(width: 50, height: 50)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("FColor"))
                   
             }
             .offset(x: 150, y:300)
@@ -77,12 +79,15 @@ struct NotesView: View {
     }
 
     func calculateHeight(index: Int) -> CGFloat {
-            let repeatingHeights: [CGFloat] = [300, 150, 200, 250] // Heights for the first four notes
-            
-            let repeatingPatternIndex = index % repeatingHeights.count
-            let minHeight: CGFloat = 100 // Minimum height for smaller notes
-            
-            // Use the larger height if it's greater than the minimum height, otherwise use the minimum height
-            return max(repeatingHeights[repeatingPatternIndex], minHeight)
-        }
+        let repeatingHeights: [CGFloat] = [300, 150, 200, 250] // Heights for the first four notes
+        let minHeight: CGFloat = 100 // Minimum height for smaller notes
+
+        let repeatingPatternIndex = index % repeatingHeights.count
+        let calculatedHeight = repeatingHeights[repeatingPatternIndex]
+
+        // Use the larger height if it's greater than or equal to the minimum height, otherwise use the minimum height
+        return max(calculatedHeight, minHeight)
+    }
+
+
 }
