@@ -20,37 +20,68 @@ struct AddNotesView: View {
 //        viewModel.fetchNotes()
 //    }
     var body: some View {
-        ZStack{
-            Color("BGColor")
-                .ignoresSafeArea(.all)
-            VStack{
-                TextEditor(text: $notesName)
-                // .frame(minHeight: 100)
-                    .focused($focusedField, equals: .field)
-                    .onAppear {
-                        self.focusedField = .field
-                    }
-                    .font(.headline)
-                    .padding(.leading)
-                   .frame(maxHeight: .infinity)
-                .cornerRadius(5)
-                .background(Color("BGColor"))
-               
-                .scrollContentBackground(.hidden)
-               //  .background(Color(uiColor: .systemGray5))
-                   
+        NavigationView{
+            ZStack{
+                Color("BGColor")
+                    .ignoresSafeArea(.all)
+                VStack{
+                    TextEditor(text: $notesName)
+                    // .frame(minHeight: 100)
+                        .focused($focusedField, equals: .field)
+                        .onAppear {
+                            self.focusedField = .field
+                        }
+                        .font(.headline)
+                        .padding(.leading)
+                        .frame(maxHeight: .infinity)
+                        .cornerRadius(5)
+                        .background(Color("BGColor"))
                     
+                        .scrollContentBackground(.hidden)
+                    //  .background(Color(uiColor: .systemGray5))
+                    
+                    
+                    
+//                    Button {
+//                        viewModel.addNotes(notesName: notesName)
+//                        self.notesName = ""
+//                        showAddFullSheet.toggle()
+//                    } label: {
+//                        Text("Add")
+//                    }
+                }
                 
-                Button {
-                    viewModel.addNotes(notesName: notesName)
-                    self.notesName = ""
-                    showAddFullSheet.toggle()
-                } label: {
-                    Text("Add")
+              //  .padding()
+            }
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        viewModel.addNotes(notesName: notesName)
+                        self.notesName = ""
+                        showAddFullSheet.toggle()
+                    }) {
+                        Image(systemName: "multiply")
+                    }
+                }
+                ToolbarItem(placement: .principal){
+                   
+                    Text("Add Note")
+                    
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                      //  showAddFullSheet.toggle()
+                    }) {
+                        Image("Setting")
+                            .resizable()
+                            .frame(width: 28.0, height: 28.0)
+                    }
                 }
             }
-            .padding()
+           
         }
+      
     }
 }
 
