@@ -18,6 +18,7 @@ struct NotesView: View {
     }
 
     var body: some View {
+        
         ZStack {
             Color("BGColor")
                 .ignoresSafeArea(.all)
