@@ -63,7 +63,7 @@ struct SingleNotesView: View {
 //                    // Fallback on earlier versions
 //                }
 //            }
-            .navigationBarTitle(Text("Recent Notes"), displayMode: .inline)
+          //  .navigationBarTitle(Text("Recent Notes"), displayMode: .inline)
         }
     }
     func calculateHeight(index: Int) -> CGFloat {
