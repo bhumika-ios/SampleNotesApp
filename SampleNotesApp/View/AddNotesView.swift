@@ -55,21 +55,38 @@ struct AddNotesView: View {
             }
             .navigationBarBackButtonHidden(true)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+//                        viewModel.addNotes(notesName: notesName)
+//                        self.notesName = ""
+                        showAddFullSheet.toggle()
+                    }) {
+                        Image(systemName: "chevron.backward")
+                            .bold()
+                    }
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         viewModel.addNotes(notesName: notesName)
                         self.notesName = ""
                         showAddFullSheet.toggle()
                     }) {
-                        Image(systemName: "multiply")
+                        Text("Done")
+                           
+                           // .opacity(viewModel.$notesArray == "" ? 0.6 : 1)
+                        
                     }
+                    .disabled(notesName.isEmpty)
+                   
                 }
                 ToolbarItem(placement: .principal){
                    
                     Text("Add Note")
                     
                 }
-                ToolbarItem(placement: .navigationBarLeading) {
+              
+               
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                       //  showAddFullSheet.toggle()
                     }) {
