@@ -63,7 +63,7 @@ struct ContentView: View {
                             }
                         }
                         .padding(.horizontal,25)
-                        Text("Recent Title")
+                        Text("Recent Notes")
                             .font(.system(size: 20).bold())
                             .padding(.horizontal)
                            
